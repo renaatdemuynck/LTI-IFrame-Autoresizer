@@ -1,9 +1,13 @@
 {
   "name": "lti-iframe-autoresizer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically resize the iframe of an LTI tool",
   "main": "src/autoresizer.js",
   "repository": "https://github.com/renaatdemuynck/LTI-IFrame-Autoresizer.git",
   "author": "Renaat De Muynck <renaat.demuynck@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lti-messaging": "^0.3.0",
+    "resize-observer-polyfill": "^1.5.0"
+  }
 }
