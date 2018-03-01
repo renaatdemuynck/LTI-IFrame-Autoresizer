@@ -7,6 +7,12 @@
 import ResizeObserver from 'resize-observer-polyfill';
 import Messenger from 'lti-messaging';
 
+function resizeHandler() {
+    var height = Math.round(document.documentElement.getBoundingClientRect().height);
+    
+    Messenger.frameResize(height);
+}
+
 export default {
     
     init: function () {
@@ -14,10 +20,10 @@ export default {
         if (window.parent === window) return;
         
         document.addEventListener('DOMContentLoaded', function () {
-            const resizeObserver = new ResizeObserver(Messenger.frameResize);
+            const resizeObserver = new ResizeObserver(resizeHandler);
             
             // Request iframe resize when content is loaded
-            Messenger.frameResize();
+            resizeHandler();
             
             // Request iframe resize when body changes size
             resizeObserver.observe(document.body);
