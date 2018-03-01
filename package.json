@@ -9,5 +9,8 @@
   "dependencies": {
     "lti-messaging": "^0.3.0",
     "resize-observer-polyfill": "^1.5.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.9"
   }
 }
