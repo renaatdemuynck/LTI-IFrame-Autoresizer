@@ -5,9 +5,7 @@ window.addEventListener('message', function (event) {
     
     console.log(params);
     
-    switch (params.subject) {
-        case 'lti.frameResize':
-            iframe.setAttribute('height', params.height);
-            break;
+    if (params.subject === 'lti.frameResize') {
+        iframe.setAttribute('height', params.height);
     }
 });
