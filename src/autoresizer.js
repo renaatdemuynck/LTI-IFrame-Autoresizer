@@ -22,9 +22,6 @@ export default {
         document.addEventListener('DOMContentLoaded', function () {
             const resizeObserver = new ResizeObserver(resizeHandler);
             
-            // Request iframe resize when content is loaded
-            resizeHandler();
-            
             // Request iframe resize when body changes size
             resizeObserver.observe(document.body);
         });
